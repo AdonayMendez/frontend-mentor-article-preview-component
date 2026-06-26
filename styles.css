@@ -49,7 +49,7 @@ p{
 main{
   background-color: rgba(255, 255, 255, 0.897);
   width: 100%; 
-  max-width: 40rem;
+  max-width: 48rem;
   /* height: 35rem; */
 
 }
@@ -74,16 +74,18 @@ main{
 .content{
   padding: 2rem;
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: auto 1fr auto;
   gap: 1rem;
 
 
   h3{
-    font-size: 1rem;
+   font-size: clamp(1rem, 0.91rem + 0.38vw, 1.25rem);
+   color: var(--darkGrayBlue);
   }
 
   p{
     font-size: .8325rem;
+    color: var(--desaturatedDarkBlue);
   }
 }
 
@@ -123,6 +125,21 @@ main{
   align-items: center;
 
   cursor: pointer;
+}
+
+@media (min-width: 80rem){
+  .card{
+    grid-template-rows: auto; 
+    grid-template-columns: 16.2rem auto;
+  }
+
+  .img-container{
+    img{
+      object-position: 0%;
+      object-fit: cover;
+    }
+    
+  }
 }
 
 
