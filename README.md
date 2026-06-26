@@ -18,4 +18,4 @@ Your users should be able to:
 
 ## My Current Progress
 
-[Live Site]()
+[Live Site](https://adonaymendez.github.io/frontend-mentor-article-preview-component/)
