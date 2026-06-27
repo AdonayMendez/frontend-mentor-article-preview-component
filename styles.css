@@ -112,6 +112,9 @@ main{
 
   }
 }
+.share-container{
+  position: relative;
+}
 
 .share-btn{
   background: var(--lightGrayishBlue);
@@ -127,6 +130,45 @@ main{
   cursor: pointer;
 }
 
+.share-popup{
+  display: none; 
+  position: absolute;
+}
+
+.share-popup::after{
+  content: "";
+  position: absolute; 
+  height: 0;
+  width: 0;
+
+  border: 1.5rem solid var(--darkGrayBlue);
+  border-left-color: transparent; 
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2.2rem;
+}
+
+.share-popup.show{
+  background-color: var(--darkGrayBlue);
+
+  width: 10rem; 
+  height: 2.5rem;
+
+  border-radius: .4rem;
+
+  bottom: calc(100% + 2rem); 
+
+  left: 50%; 
+  transform: translateX(-50%);
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+}
+
 @media (min-width: 80rem){
   .card{
     grid-template-rows: auto; 
@@ -138,8 +180,9 @@ main{
       object-position: 0%;
       object-fit: cover;
     }
-    
   }
+
+  
 }
 
 
