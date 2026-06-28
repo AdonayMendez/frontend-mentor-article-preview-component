@@ -72,7 +72,7 @@ main{
 }
 
 .content{
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 1rem;
@@ -98,8 +98,8 @@ main{
 }
 
 .author-img-container{
-  width: 3rem;
-  height: 3rem;
+  width: 2.2rem;
+  height: 2.2rem;
   display: flex;
 
   img{
@@ -118,6 +118,7 @@ main{
 }
 
 .share-btn{
+  position: relative;
   background: var(--lightGrayishBlue);
   border: none;
   width: 2rem; 
@@ -129,6 +130,7 @@ main{
   align-items: center;
 
   cursor: pointer;
+  z-index: 20;
 }
 
 .share-popup{
@@ -141,10 +143,10 @@ main{
 
   left: -2rem;
   right: -2rem;
-  bottom: -2rem;
+  bottom: -1rem;
   top: 0rem;
 
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   border-bottom-left-radius: 0.5rem; 
   border-bottom-right-radius: 0.5rem;
@@ -153,10 +155,28 @@ main{
 
 
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   place-items: center;
 }
 
+
+.popup-social-links{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  place-items: center;
+
+  gap: 1rem;
+
+  a{
+    display: flex;
+  }
+  img{
+    display: block;
+  }
+
+}
 
 
 
@@ -180,6 +200,11 @@ main{
 
   .share-container{
     position: relative; 
+  }
+
+  .share-container.active .share-btn{
+    position: relative; 
+    z-index: 20;
   }
 
   .share-popup.show {
