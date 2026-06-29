@@ -29,6 +29,7 @@
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
+  font-family: 'Manrope', serif;
 }
 
 body{
@@ -113,6 +114,20 @@ main{
 
   }
 }
+
+
+.author-info{
+
+  h5{
+    color: var(--darkGrayBlue);
+  }
+  p{
+    color: var(--grayishBlue);
+  }
+}
+
+
+
 .share-container{
   position: static;
 }
@@ -133,6 +148,15 @@ main{
   z-index: 20;
 }
 
+.share-container.active .share-btn{
+  background: var(--desaturatedDarkBlue);
+
+}
+
+.share-container.active .share-btn img {
+  filter: brightness(0) invert(1); 
+}
+
 .share-popup{
   display: none; 
   position: absolute;
@@ -144,7 +168,7 @@ main{
   left: -2rem;
   right: -2rem;
   bottom: -1rem;
-  top: 0rem;
+  top: -1rem;
 
   padding: 0 1rem;
 
@@ -155,7 +179,7 @@ main{
 
 
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
 }
 
@@ -167,7 +191,7 @@ main{
 
   place-items: center;
 
-  gap: 1rem;
+  gap: 0rem;
 
   a{
     display: flex;
@@ -175,7 +199,13 @@ main{
   img{
     display: block;
   }
+}
 
+.share-text{
+  color: var(--grayishBlue);
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-size: 0.85rem
 }
 
 
@@ -218,24 +248,30 @@ main{
     height: auto;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .popup-social-links {
+    display: flex;
+    gap: 1rem;
   }
 
 
-  .share-popup::after{
-  content: "";
-  position: absolute; 
-  height: 0;
-  width: 0;
-
-  border: 1.5rem solid var(--darkGrayBlue);
-  border-left-color: transparent; 
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -2.2rem;
-}
+.share-popup::after {
+    content: "";
+    position: absolute; 
+    height: 0;
+    width: 0;
+    border: 0.6rem solid transparent; /* Sized down slightly to look sharper */
+    border-top-color: var(--darkGrayBlue);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.1rem;
+  }
   
 }
 
