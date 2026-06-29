@@ -22,6 +22,7 @@
   --grayishBlue: hsl(212, 23%, 69%);
   --lightGrayishBlue: hsl(210, 46%, 95%);
   --shareBtn-bg-color: rgba(211, 211, 211, 0.30);
+  --card-box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.090);
 }
 
 *, 
@@ -52,7 +53,7 @@ main{
   width: 100%; 
   max-width: 45rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.090);
+  box-shadow: var(--card-box-shadow);
 }
 
 .card{
@@ -207,7 +208,7 @@ main{
 
 .share-text{
   color: var(--grayishBlue);
-  letter-spacing: 3px;
+  letter-spacing: 0.2rem;
   font-weight: 500;
   font-size: 0.85rem
 }

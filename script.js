@@ -1,6 +1,6 @@
-let shareBtn = document.getElementById("shareBtn"); 
-let sharePopUp = document.querySelector(".share-popup"); 
-let shareContainer = document.querySelector(".share-container"); 
+const shareBtn = document.getElementById("shareBtn"); 
+const sharePopUp = document.querySelector(".share-popup"); 
+const shareContainer = document.querySelector(".share-container"); 
 
 
 shareBtn.addEventListener('click', () =>{
