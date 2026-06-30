@@ -57,8 +57,10 @@ main{
 }
 
 .card{
+  background-color: white;
   display: grid;
   grid-template-rows: 13rem auto;
+  border-radius: 0.5rem;
 }
 
 .img-container{
